@@ -29,7 +29,7 @@ class BucketlistTestCase(unittest.TestCase):
         self.assertEqual(res.status_code, 201)
         res = self.client().get('/bucketlists/')
         self.assertEqual(res.status_code, 200)
-        self.assertIn('Go to Borabora', str(res.data))
+        self.assertIn('Go to Hawaii', str(res.data))
 
     def test_api_can_get_bucketlist_by_id(self):
         """Test API can get a single bucketlist by using it's id."""
